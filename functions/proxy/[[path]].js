@@ -26,6 +26,7 @@ const MEDIA_CONTENT_TYPES = ['video/', 'audio/', 'image/'];
  */
 export async function onRequest(context) {
     const { request, env, next, waitUntil } = context; // next 和 waitUntil 可能需要
+    console.log("环境变量",env)
     const url = new URL(request.url);
 
     // 验证鉴权（主函数调用）
