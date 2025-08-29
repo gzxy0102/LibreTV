@@ -580,7 +580,7 @@ export function onRequest(context) {
 }
 
 // 处理 OPTIONS 预检请求的函数
-export async function onOptions(context) {
+export function onOptions(context) {
     // 直接返回允许跨域的头信息
     return new Response(null, {
         status: 204, // No Content
