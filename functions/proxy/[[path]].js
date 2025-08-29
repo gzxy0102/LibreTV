@@ -24,7 +24,7 @@ const MEDIA_CONTENT_TYPES = ['video/', 'audio/', 'image/'];
  * 主要的 Pages Function 处理函数
  * 拦截发往 /proxy/* 的请求
  */
-export async function onRequest(context) {
+export function onRequest(context) {
     const { request, env, next, waitUntil } = context; // next 和 waitUntil 可能需要
     console.log("环境变量",env)
     const url = new URL(request.url);
