@@ -2,6 +2,7 @@ import { sha256 } from '../js/sha256.js';
 
 export async function onRequest(context) {
   const { request, env, next } = context;
+  console.log("环境变量", env)
   const response = await next();
   const contentType = response.headers.get("content-type") || "";
   
